@@ -10,23 +10,23 @@ def rock_press():
     
     user_choice = "rock"
     play(user_choice)
-    user = Label(screen,text = "rock")
-    user.grid(row = 3,column = 2)
+    user2 = Label(screen,text = "rock")
+    user2.grid(row = 3,column = 2)
 
 
 def paper_press():
     
     user_choice = "paper"
     play(user_choice)
-    user = Label(screen,text = "paper")
-    user.grid(row = 3,column = 2)
+    user2 = Label(screen,text = "paper")
+    user2.grid(row = 3,column = 2)
     
 def scissors_press():
     
     user_choice = "scissors"
     play(user_choice)
-    user = Label(screen,text = "scissors")
-    user.grid(row = 3,column = 2)
+    user2 = Label(screen,text = "scissors")
+    user2.grid(row = 3,column = 2)
     
 def play(user_input):
     cpu_inputs = ["rock","paper","scissors"]

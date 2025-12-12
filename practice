@@ -1,0 +1,30 @@
+not_sort = [3,4,8,2,5,7,9,0,1,6]
+sort = []
+sort.append(not_sort[0])
+not_sort.pop(0)
+maxi = 0
+for i in range (len(not_sort)):
+    sorted = False
+    maxi = 0
+    while not sorted:
+        if not_sort[i]>sort[0]:
+            
+            sort.insert(0,not_sort[i])
+            
+            sorted = True
+        elif not_sort[i]>=sort[maxi]:
+            sort.insert(maxi,not_sort[i])
+            
+            sorted = True
+        else:
+            if (maxi+1) ==(len(sort)):
+                sort.append(not_sort[i])
+                sorted = True
+            else:
+              maxi+=1
+                
+print(sort)
+
+        
+
+        
