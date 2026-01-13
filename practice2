@@ -1,0 +1,41 @@
+nums = [1,4,8,3,7,5,4]
+def merge(l,mid,r,j,lis):
+  extra = []
+  while l <= mid  and r <= j:
+    
+    print("one",l,r)
+    if lis[r]<lis[l]:
+      extra.append(lis[r])
+      r+=1
+    else:
+      extra.append(lis[l])
+      l+=1
+  while l <= mid:
+    print("secon")
+    extra.append(lis[l])
+    l+=1
+  while r <= j:
+    print("third")
+    extra.append(lis[r])
+    r+=1
+  print(extra)
+  for i in range(l,j):
+    nums[i] = extra[i]
+
+  
+  
+  
+
+def separation(i,j,lis):
+  if i>=j:
+    return
+  mid = (i+j)//2
+  separation(i,mid,lis)
+  separation(mid+1,j,lis)
+  merge(i,mid,mid+1,j,lis)
+
+
+
+
+separation(0,6,nums)
+print(nums)
